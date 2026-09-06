@@ -16,7 +16,7 @@ O pipeline analítico integra três fontes de dados oficiais distintas, unificad
 ## ⚙️ Etapas de Modelagem
 O projeto foi estruturado em um fluxo reprodutível dividido em quatro notebooks sequenciais localizados na pasta `notebooks/`:
 
-* **`01_gold_eda.ipynb`:** Análise exploratória inicial dos indicadores educacionais da camada Gold.
+* **`01_exploracao_base_gold.ipynb`:** Análise exploratória inicial dos indicadores educacionais da camada Gold.
 * **`02_limpeza_dados_externos.ipynb`:** Extração automatizada da API de localidades do IBGE (garantindo o "De/Para" de municípios) e limpeza estruturada das bases do Atlas e Censo Escolar, com perfis técnicos documentados.
 * **`03_cruzamento_e_storytelling.ipynb`:** Construção da Tabela Analítica Final (ABT) e validação visual de hipóteses de negócio através de gráficos integrados.
 * **`04_modelagem_machine_learning.ipynb`:** Pré-processamento avançado com imputação de nulos, padronização e codificação, seguido de treinamento supervisionado, *tuning* de hiperparâmetros e explicabilidade.
