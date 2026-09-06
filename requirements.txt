@@ -1,0 +1,10 @@
+pandas
+numpy
+requests
+matplotlib
+seaborn
+scikit-learn
+shap
+openpyxl
+pyarrow
+jupyter
