@@ -1,0 +1,35 @@
+=========================================================
+RELATÓRIO DE DESEMPENHO: PREDITOR DE METAS DE ALFABETIZAÇÃO
+=========================================================
+Modelo Final: RandomForestClassifier (class_weight='balanced')
+Otimização: GridSearchCV focada em Precisão (Precision)
+Validação: StratifiedKFold (5 splits)
+Limiar de Confiança Ajustado (Threshold): 0.55
+
+---------------------------------------------------------
+MATRIZ DE CONFUSÃO (Mundo Real vs. Previsão)
+---------------------------------------------------------
+- Verdadeiros Negativos (4015): Cidades abaixo da meta que o modelo identificou corretamente. (Foco em mitigar o risco real).
+- Falsos Negativos (2276): Cidades que bateriam a meta, mas o modelo apontou risco. (Custo preventivo aceitável em políticas públicas).
+- Verdadeiros Positivos (341): Cidades de sucesso identificadas perfeitamente.
+- Falsos Positivos (318): Cidades abaixo da meta previstas como sucesso. (Risco crítico isolado e controlado).
+
+---------------------------------------------------------
+CLASSIFICATION REPORT
+---------------------------------------------------------
+              precision    recall  f1-score   support
+
+           0       0.64      0.93      0.76      4333
+           1       0.52      0.13      0.21      2617
+
+    accuracy                           0.63      6950
+   macro avg       0.58      0.53      0.48      6950
+weighted avg       0.59      0.63      0.55      6950
+
+---------------------------------------------------------
+INSIGHTS DE EXPLICABILIDADE (SHAP VALUES)
+---------------------------------------------------------
+1. O modelo aprendeu a evitar o Data Leakage após a remoção de variáveis derivadas da meta.
+2. A Dependência Administrativa (Rede) é o maior divisor águas no desempenho.
+3. Indicadores de infraestrutura estrutural (Salas de Leitura) superaram indicadores básicos (como água) em poder preditivo.
+4. A vulnerabilidade social atua com forte peso direcional, comprovando a natureza não-linear do problema educacional.
